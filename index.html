@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目名称 - 个人主页</title>
+    <style>
+        /* 全局设置 */
+        body { font-family: "Microsoft YaHei", sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; }
+        
+        /* 1. 【新增】主内容居中容器，实现左右间距和居中效果 */
+        .main-wrapper {
+            max-width: 1200px; /* 设定最大宽度，例如1200像素 */
+            margin: 0 auto; /* 自动居中 */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* 增加轻微阴影以突出主体 */
+            background-color: white; /* 设置主内容区域背景为白色 */
+        }
+        
+        /* 顶部蓝色标题栏 (项目名称) */
+        .header {
+            background-color: #1f77b4; /* 蓝色 */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            /* margin-bottom: 20px; 移除这里的margin，让它贴合header */
+        }
+
+        /* 作者信息框 */
+        .author-box {
+            background-color: #4CAF50; /* 绿色 */
+            color: white;
+            padding: 10px;
+            text-align: right;
+            margin: 20px 20px 20px 0; /* 在主内容区内添加间距 */
+            width: 150px;
+            float: right; 
+            font-size: 1.1em;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 主内容区域 */
+        .content {
+            padding: 20px;
+            clear: both; /* 清除浮动 */
+        }
+
+        /* 视频外层容器 (灰色背景和边框) */
+        .video-container {
+            border: 1px solid #aaa;
+            background-color: #ccc; /* 灰色背景 */
+            padding: 15px;
+        }
+
+        /* 视频标题 (下面视频为演示效果) */
+        .video-title {
+            background-color: #ffdab9; /* 浅橙色背景 */
+            border: 1px solid #ff9966;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        
+        /* HTML5 视频标签样式：确保视频宽度适应容器 */
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-wrapper"> 
+        <div class="header">
+            [你的项目名称]
+        </div>
+
+        <div class="author-box">
+            作者: [你的名字]
+        </div>
+
+        <div class="content">
+            <div class="video-container">
+                <div class="video-title">
+                    下面视频为演示效果
+                </div>
+                
+                <video controls>
+                    <source src="demo.mp4" type="video/mp4">
+                    您的浏览器不支持 HTML5 视频播放。
+                </video>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
